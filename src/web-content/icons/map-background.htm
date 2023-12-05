@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+        <canvas width="200" height="200" class="homepage-canvas"></canvas>
+        <canvas width="200" height="200" class="homepage-canvas"></canvas>
+    <script>
+      let c1 = document.getElementsByTagName('canvas')[0], c2 = document.getElementsByTagName('canvas')[1];
+        let canvas1 = c1.getContext('2d');
+        canvas1.arc(100,100,50,0,2*Math.PI);
+        canvas1.lineWidth = 0.1;
+        canvas1.translate(100,100);
+        canvas1.moveTo(0,-50);
+        canvas1.quadraticCurveTo(-60,0,0,50);
+        canvas1.moveTo(0,-50);
+        canvas1.quadraticCurveTo(60,0,0,50);
+        canvas1.moveTo(0,-50);
+        canvas1.quadraticCurveTo(10,0,0,50);
+        canvas1.moveTo(-50,0);
+        canvas1.quadraticCurveTo(0,20,50,0);
+        canvas1.stroke();
+        canvas1.closePath();
+
+        canvas1.beginPath();
+        canvas1.moveTo(-40,-30);
+        canvas1.moveTo(-32,-35);
+        canvas1.arcTo(-20,-43,-15,-43,10);
+        canvas1.lineTo(-13,-43);
+        canvas1.lineTo(-10,-40);
+        canvas1.lineTo(-8,-43);
+        canvas1.quadraticCurveTo(20,-40,18,-43);
+        canvas1.lineTo(18,-43);
+        canvas1.lineTo(5,-35);
+        canvas1.quadraticCurveTo(15,-35,20,-30);
+        canvas1.arcTo(15,-35,15,-30,5);
+        canvas1.lineTo(18,-38);
+        canvas1.lineTo(30,-34);
+        canvas1.lineTo(15,-20);
+        canvas1.lineTo(-10,-10);
+        canvas1.lineTo(-8,-5);
+        canvas1.lineTo(-3,3);
+        canvas1.quadraticCurveTo(0,0,25,5);
+        canvas1.lineTo(25,10);
+        canvas1.lineTo(15,25);
+        canvas1.arcTo(10,50,0,45,5);
+        canvas1.lineTo(0,25);
+        canvas1.quadraticCurveTo(-10,10,2,5);
+        canvas1.lineTo(-15,-10);
+        canvas1.lineTo(-30,-15);
+        canvas1.lineTo(-30,-25);
+        canvas1.lineTo(-40,-30);
+        canvas1.fillStyle = 'black';
+        canvas1.shadowColor = 'black';
+        canvas1.shadowBlur = 2;
+        canvas1.fill();
+        canvas1.closePath();
+
+        let canvas2 = c2.getContext('2d');
+        canvas2.fillStyle='black';
+      canvas2.beginPath();
+      canvas2.lineCap = "round";
+      canvas2.moveTo (30,80);
+      canvas2.quadraticCurveTo(0, 20, 100, 0);
+      canvas2.arcTo(120,0,110,50,20);
+      canvas2.lineTo(130, 35);
+      canvas2.lineTo(127, 25);
+      canvas2.arcTo(158,35,158,40,5);
+      canvas2.arcTo(165,78,170,78,5);
+      canvas2.arcTo(200,73,195,78,3);
+      canvas2.quadraticCurveTo(160, 120, 160, 130);
+      canvas2.lineTo(163, 135);
+      canvas2.arcTo(130,200,90,180,10);
+      canvas2.lineTo(105, 135);
+      canvas2.lineTo(100, 100);
+      canvas2.lineTo(98, 95);
+      canvas2.lineTo(93, 92);
+      canvas2.lineTo(90, 95);
+      canvas2.lineTo(65, 95);
+      canvas2.lineTo(50, 90);
+      canvas2.lineTo(30, 80);
+      canvas2.arcTo(25,75,30,70,5);
+      //canvas2.stroke();
+      canvas2.fill();
+      canvas2.closePath();
+      canvas2.beginPath();
+      canvas2.moveTo(190,130);
+      canvas2.quadraticCurveTo(180,180, 160, 180);
+      canvas2.lineTo(190,130);
+      canvas2.fill();
+    </script>
+  </body>
+</html>

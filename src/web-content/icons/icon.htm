@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <canvas id="icon" width="16" height="16"></canvas>
+    <canvas id="usericon" width="40" height="30"></canvas>
+    <script>
+      let i = document.getElementById("icon");      
+      let icon = i.getContext("2d");
+
+      icon.font = "8px Arial";
+      icon.fillText("B", 5, 11);
+
+      icon.moveTo(8,0);
+      icon.lineTo(16,8);
+      icon.lineTo(8,16);
+      icon.lineTo(0,8);
+      icon.lineTo(8,0);
+      icon.stroke();
+
+      let user = document.getElementById("usericon");
+      let usericon = user.getContext("2d");
+      usericon.beginPath();
+      usericon.arc(20,10,5,2*Math.PI);
+      usericon.fill();
+      usericon.arc(20,28,10,2*Math.PI);
+      usericon.fill();
+      usericon.closePath();
+    </script>
+  </body>
+</html>
